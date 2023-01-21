@@ -1,92 +1,268 @@
-# Desafio para o processo seletivo SHARENERGY 2023/01
+# Desafio técnico realizado para o processo seletivo da SHARENERGY
 
-Repositório destinado aos interessados em participar do processo seletivo da SHARENERGY 2023/01. As vagas são voltadas para desenvolvimento de aplicações Web e Mobile.
+Repositório destinado aos candidatos do processo seletivo da SHARENERGY em 2023, com vagas para desenvolvimento de aplicações Web e Mobile.
 
-## Sobre a SHARENERGY
 
-No ramo da produção de energia fotovoltaica, há a modalidade de produção compartilhada. Nessa modalidade, diferentes pessoas investem na construção de uma mesma usina fotovoltaica e dividem o retorno finaceiro referente à energia gerada pela usina.
+## 🚀 Começando
 
-Acreditamos que as energias renováveis terão um lugar dominante em nossa economia pelo resto de nossas vidas. Trabalhamos no sentido de ampliar o impacto positivo que as energias renováveis podem ter no meio ambiente e nas nossas vidas. O sucesso da SHARENERGY é resultado de nossa equipe apaixonada, juntamente com nosso compromisso de oferecer a melhor solução.
+Antes de utilizar o projeto, é necessario ter Git, MongoDB (Docker container ou local) e npm/yarn instalado na máquina.
 
-Sabemos que negócios enfrentam desafios únicos e por isso oferecemos soluções turnkey, customizadas, economicamente viáveis e seguras.
 
-A Startup figura entre as top 10 EnergyTechs do ranking 100 Open Startups desde 2018. Prova de que a inovação está enraizada em nossa cultura. Somos uma startup em estágio de crescimento e você trabalhará diretamente com os fundadores, ajudando a definir a visão, o produto e a experiência do usuário.
 
-<p align="left">
-  <a href="https://www.linkedin.com/company/sharenergy-brasil/">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn Button">
-  </a>
-  <a href="https://sharenergy.com.br/">
-    <img src="https://img.shields.io/badge/-Website-red" alt="Sharenergy Website Button">
-  </a>
-</p>
+## 📃 Sobre
+  <p>
+    O objetivo deste projeto foi construir uma aplicação web (frontend e backend) capaz de realizar a comunicação com APIs distintas, além de um CRUD.
+  </p>
 
-## Sobre a vaga
 
-Já pensou em potencializar o setor que mais cresce na galáxia e trabalhar com uma solução que utiliza tecnologia web de ponta, altamente distribuída com foco em performance e disponibilidade? 👀
+## 🛠️ Ferramentas
 
-Os desenvolvedores da Sharenergy são responsáveis por criar e manter aplicações para clientes internos e externos, prover soluções escaláveis, resilientes e altamente disponíveis que sustentem picos de acesso além de atuar como referência técnica e tutores de outros desenvolvedores.
+## - Front-End:
 
-Procuramos por pessoas dinâmicas e que queiram estar aprendendo sempre. Nossa equipe é jovem, motivada e estamos sempre em busca de soluções criativas para alcançar os resultados que nossos clientes esperam. Se você tem esse perfil, é autoconfiante, autodidata e tem facilidade para lidar com desafios diários, essa vaga é para você!
+  - React 6
+  - Typescript
+  - React Router Dom
+  - Context Api
+  - React Hooks
+  - CSS modules
+  - Pico CSS Library
+  - Axios
+  
+## - Back-End:
 
-# O Desafio
+  - Node
+  - Typescript
+  - Express
+  - Cors
+  - Mongodb
+  - JWT
+  - mongoose
 
-Construir uma aplicação web (frontend e backend) capaz de realizar a comunicação com APIs distintas, além de um CRUD.
+## ⏯️ Vídeo
 
-## Aplicação
+- [Veja no link a seguir o projeto sendo executado:](https://youtu.be/ysIHGyid3Ms)
 
-- A página inicial da aplicação deve ser uma `Login Page`;
-- O usuário deve ser capaz de se autenticar utilizando o username `desafiosharenergy` e password `sh@r3n3rgy`, também, deve existir a possibilidade do usuário utilizar o `remember me` para realizar logins automáticos, sem a necessidade de digitar username e password após o primeiro acesso;
-- Após o Login, a página principal deve conter uma listagem de usuários gerada a partir da api [Random User Generator](https://randomuser.me/), a lista deve conter a foto do usuário, nome completo, email, username e idade. Além disso, os requests devem ser páginados, porém, é de critério do participante do desafio a quantidade de resultados a serem exibidos por página e variações para o mesmo. Também, deve haver uma search para buscar usuários por nome, email ou username;
-- Em uma segunda página, o usuário deve ser capaz de selecionar um status code http qualquer, e, após a seleção, deve ser retornada uma imagem da api [HTTP Cat](https://http.cat/) relacionada ao status escolhido, caso não exista tal imagem, deve ser retornada uma imagem de not found à critério de escolha do participante do desafio;
-- Em uma terceira página, deve haver um botão de refresh que, ao ser clicado, deve retornar uma imagem aleatória da api [Random Dog](https://random.dog/);
-- Em uma quarta página, deve haver uma lista de clientes, através da qual o usuário deve ser capaz de cadastrar novos clientes, visualizar informações de um cliente específico, atualizar um cliente e deletar clientes. O cadastro deve possuir nome, email, telefone, endereço e cpf.
+## ⚙️ Como executar
 
-### Requisitos da aplicação e de código
+Verifique que as portas 3000 e 3001 estejam disponíveis para a aplicação, bem como a porta 27017, que será utilizada pelo MongoDB.
 
-- Interface amigável, bonita e limpa
-- Responsividade
-- Clean Code
+1 - Clone o repositório em uma pasta de sua preferencia 
+```
+git@github.com:d4n13ln13ls3n/desafio-sharenergy-daniel-yabu.git
 
-### Ferramentas e Stack a ser utilizado
+```
+2 - Instale as dependências necessárias para executar o projeto através do comando <strong>npm install</strong> na raiz do projeto.
 
-- ReactJS para o frontend
-- NodeJS (com ou sem frameworks) ou Golang para o backend
-- MongoDB
-- TypeScript
-- HTML e CSS
+3 - Após acessar o diretório <strong>api</strong>, rode o comando <strong>npm run dev</strong> para iniciar o servidor. Certifique-se de ter habilitado um container do MongoDB em sua máquina, o que pode ser feito através do comando <strong>docker run --name some-mongo -d mongo:tag</strong>. Substituir <strong>some-mongo</strong> pelo nome que você quiser atribuir ao seu container. <strong>Tag</strong> refere-se à versão do MongoDB que você quer utilizar. Mais instruções sobre o MongoDB podem ser encontradas em <strong>https://hub.docker.com/_/mongo</strong>. O back-end está disponível no endereço <strong>http://localhost:3001</strong>
 
-### Aprimoramentos adicionais da aplicação (opcional)
+4 - A próxima etapa consiste em acessar o diretório <strong>front-end</strong>, o que pode ser feito, caso você ainda esteja no diretório <strong>api</strong>, através dos comandos <strong>cd ..</strong> e <strong>cd front-end</strong>. Feito isso, execute o comando <strong>npm run build</strong> e a aplicação deverá abrir em alguns segundos em seu browser, no endereço <strong>http://localhost:3000</strong>
 
-A aplicação criada para o desafio pode ser aprimorada com recursos pensados por você. A seguir, foram listadas algumas sugestões do que poderia ser feito:
+# Back-End
 
-- Testes
-- Documentação
+## 1 - Rotas do Usuário - User Routes
 
-### Mas, afinal, quais ferramentas a Sharenergy utiliza?
+###  Login
 
-* [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) e [Typescript](https://www.typescriptlang.org/)
-* Front-end: [ReactJS](https://reactjs.org/) e [React Native](https://reactnative.dev/)
-* Back-end: [Node.js](https://nodejs.org/en/), [NestJS](https://nestjs.com/) e [Go](https://golang.org/)
-* Banco de dados: [MongoDB](https://www.mongodb.com/) do lado do servidor e [Minimongo](https://guide.meteor.com/collections.html) do lado do cliente (cache)
-* Gerenciamento de Containers: [Docker](https://www.docker.com/)
-* Gerenciamento de Repositórios: [NX](https://nx.dev/)
-* UI: [Tailwind CSS](https://tailwindcss.com/) e [Material-UI V4](https://v4.mui.com/)
-* Sistema Operacional (principal): [Linux](https://www.linux.org/), também sendo possível utilizar o [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) (WSL)
+| Método | Funcionalidade             | URL                              |
+| ------ | -------------------------- | -------------------------------- |
+| `POST` | Realiza o login do usuário | http://localhost:3001/login |
 
-## O que devo entregar?
+Nessa requisição `POST` é necessário informar o seguinte JSON:
 
-Esperamos de você duas entregas: o código no GitHub e um vídeo explicativo no YouTube.
+```
+{
+  "username": "desafiosharenergy",
+  "password": "sh@r3n3rgy"
+}
+```
 
-### Instruções
+## 2 - Rotas de Clientes
 
-- Faça um fork desse repositório.
-- Em seguida, crie uma branch, cujo nome é o seu nome completo, no seguinte formato: meu-nome-completo.
-- Resolva o desafio realizando versionamento local e remoto. Fique à vontade em criar outras branches durante o desenvolvimento do código.
-- Inclua no README.md uma breve instrução de instalação e de execução da aplicação criada.
-- Faça um vídeo que explique o que você fez no desafio, com duração aproximada de 5 minutos. A facecam é opcional, mas bem-vinda. O vídeo deve ser postado no YouTube (pode deixar como não listado) e seu link deve ser colocado no README.md.
-- Ao finalizar o desafio, faça um pull request de sua branch para esse repositório.
+As rotas abaixo necessitam de um token válido, que é gerado no login do usuário, para funcionar corretamente. Este token deve ser passado pelo `header` da requisição na chave `authorization`. 
 
-### Prazo limite de entrega
+### Cadastro de cliente
 
-O pull request com sua solução do desafio deve ser feito até a data especificada no corpo do email que você recebeu com a descrição do desafio.
+| Método | Funcionalidade             | URL                                 |
+| ------ | -------------------------- | ----------------------------------- |
+| `POST` | Realiza o cadastro de clientes | http://localhost:3001/customers |
+
+Nessa requisição `POST` é necessário informar o seguinte JSON:
+
+```
+{
+  "name": nome do cliente,
+  "email": email do cliente,
+  "cpf": cpf do cliente,
+  "phone": telefone do cliente,
+  "address": endereço do cliente,
+}
+
+```
+Esta requisição retorna o seguinte JSON 
+```
+{
+  "id": id do cliente,
+  "name": nome do cliente,
+  "email": email do cliente,
+  "cpf": cpf do cliente,
+  "phone": telefone do cliente,
+  "address": endereço do cliente,
+}
+```
+
+### Listagem de clientes
+
+| Método | Funcionalidade                                    | URL                                |
+| ------ | ------------------------------------------------- | ---------------------------------- |
+| `GET`  | Lista todos os clientes | http://localhost:3001/customers |
+
+Nessa rota não é necesário o envio de um token válido através do headers.
+
+Esta requisição retorna as seguintes informações:
+
+```
+[{
+  "id": id do cliente,
+  "name": nome do cliente,
+  "email": email do cliente,
+  "cpf": cpf do cliente,
+  "phone": telefone do cliente,
+  "address": endereço do cliente,
+
+}]
+```
+
+### Atualização de clientes
+
+| Método | Funcionalidade                                    | URL                                |
+| ------ | ------------------------------------------------- | ---------------------------------- |
+| `PUT`  | Altera dados de um cliente | http://localhost:3001/customers/:id |
+
+É necesário o envio de um token válido através dos headers e um id por params.
+
+Nesta rota, são feitas algumas validações de usuario: 
+
+name: String, maior que 3 caracteres,
+email: String e formato email padrão,
+cpf: String com exatamente 11 caracteres,
+phone: String com pelo menos 10 caracteres,
+address: String, maior que 9 caracteres,
+
+
+Esta requisição `PUT` exige o seguinte JSON para funcionar:
+
+```
+{
+  "name": nome do cliente,
+  "email": email do cliente,
+  "cpf": cpf do cliente,
+  "phone": telefone do cliente,
+  "address": endereço do cliente,
+}
+```
+
+Esta requisição `PUT` retorna as seguintes informações:
+
+```
+{
+  "id": id do cliente,
+  "name": nome do cliente,
+  "email": email do cliente,
+  "cpf": cpf do cliente,
+  "phone": telefone do cliente,
+  "address": endereço do cliente,
+
+}
+```
+
+### Remoção de clientes
+
+| Método | Funcionalidade                                    | URL                                |
+| ------ | ------------------------------------------------- | ---------------------------------- |
+| `DELETE`  | Exclui um cliente especifico | http://localhost:3001/customers/:id |
+
+É necesário o envio de um token válido através dos headers e um id por params.
+
+Esta requisição `DELETE` retorna as seguintes informações
+
+```
+{
+  "id": id do cliente,
+  "name": nome do cliente,
+  "email": email do cliente,
+  "cpf": cpf do cliente,
+  "phone": telefone do cliente,
+  "address": endereço do cliente,
+
+}
+```
+
+### Encontrar um cliente específico
+
+| Método | Funcionalidade                                    | URL                                |
+| ------ | ------------------------------------------------- | ---------------------------------- |
+| `GET`  | Encontrar um cliente pelo id | http://localhost:3001/customer/:id |
+
+É necesário o envio de um token válido atravéz do headers.
+
+Esta requisição `GET` exige o seguinte JSON:
+
+```
+{
+  "id": id do cliente
+}
+```
+
+Esta requisição `GET` retorna as seguintes informações
+
+```
+{
+  "id": id do cliente,
+  "name": nome do cliente,
+  "email": email do cliente,
+  "cpf": cpf do cliente,
+  "phone": telefone do cliente,
+  "address": endereço do cliente,
+}
+```
+
+# Front-End
+
+## 1 - Login
+Esta página inicial possui um título, um campo de login para o usuário incluir seu username, dois botões (um para usuários existentes fazerem login e outros para usuários se cadastrarem), um checkbox com a opção de  Remember Me e um footer com o nome do desenvolvedor desta aplicação.
+
+Para realizar o login, basta clicar no botão `Login` após preencher o nome de usuário (desafiosharenergy) e senha (sh@r3n3rgy) corretos. Caso a opção `Remember-me` esteja marcada, nas próximas sessões o nome do usuário já estará preenchido.
+
+<div align="center">
+  <img src="./images/Login.png" alt="Login"/>
+</div>
+
+## 2 - Tela de Gatos
+
+Nessa tela, solicita-se ao usuário inserir um status code no campo de input que ali aparece e clicar em um botão. Feito isso, é realizada uma requisição à API `https://http.cat/{statusCode}` com o codigo solicitado no input. Caso o status code seja válido, é exibida uma imagem de um gato correspondente àquele status code. Caso não seja, é exibida uma mensagem de Not Found.
+
+<div align="center">
+  <img src="./images/cats.png" alt="cats"/>
+</div>
+
+## 3 - Tela de Cachorros
+
+Esta página utiliza-se da API `https://random.dog/woof` para renderizar imagens de cachorros aleatórios na tela. A cada clique no botão RECARREGAR, é exibida uma foto diferente. Em alguns casos, a imagem não está disponível e aí a página exibe o texto alternativo referente àquela imagem, que foi incluido à título de boas práticas de acessibilidade.
+
+<div align="center">
+  <img src="./images/dogs.png" alt="dogs"/>
+</div>
+
+## 4 - Tela de Users/Home
+
+Esta página faz uso da API `https://randomuser.me/` para popular uma tabela com dados de usuários. Esta tabela permite uma filtragem de usuários por nome, username e email. Existe na tela também uma barra de paginação, já que são exibidos cinco usuários por vez em um total de 11. Através de tal barra, é possível ver os usuários seguintes e anteriores, bem como pular páginas através da barra de navegação.
+<div align="center">
+  <img src="./images/login.png" alt="login"/>
+</div>
+
+## 5 - Tela de Clientes
+
+Esta página alimenta-se dos dados gerados pela API criada no back-end deste projeto. O container da esquerda exibe, de forma fixa, a lista dos clientes disponíveis no banco de dados (em tempo real, quando usuários são incluídos, atualizados e removidos, é possível ver as alterações ali). A tela da direita tem duas funções: exibir os botões que permitem fazer operações (listar, atualizar, criar e remover usuário) e exibir formulários que permitem executar as ações vinculadas a cada botão. Os formulários contém o botão de voltar, para que o usuário possa fazer outras operações com maior comodidade.
+<div align="center">
+  <img src="./images/clientes.png" alt="home"/>
+</div>
